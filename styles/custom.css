@@ -22,8 +22,8 @@ body.bg {
 }
 
 @font-face {
-	font-family: MavenPro-Black.ttf;
-	src: url(sansation_light.woff);
+	font-family: MavenPro-Black;
+	src: url(styles/fonts/);
 }
 
 
@@ -191,6 +191,8 @@ div#text-slider h1.wel span {
 	top: 0;
 	padding: 20px 2%;
 	width: 100%;
+	/* APLICANDO COLOR AL BACKGROUND */
+	background-color: rgba(192, 192, 192, 0.3);
 	transition: 0.3s ease-in-out;
 	-webkit-transition: 0.3s ease-in-out;
 	-o-transition: 0.3s ease-in-out;
