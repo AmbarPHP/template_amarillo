@@ -35,10 +35,43 @@
    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
       crossorigin="anonymous"></script>
 
+   <script>
+      $(document).ready(function () {
 
+         /*********************************************** boton hacia arriba **********************************************/
+         $('.ir-arriba').click(function () {
+            $('body, html').animate({
+               scrollTop: '0px'
+            }, 1000);
+         });
+
+         $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+               $('.ir-arriba').slideDown(600);
+            } else {
+               $('.ir-arriba').slideUp(600);
+            }
+         });
+
+         /*hacia abajo*/
+         $('.ir-abajo').click(function () {
+            $('body, html').animate({
+               scrollTop: '1000px'
+            }, 1000);
+         });
+
+      });
+   </script>
 </head>
 
 <body class="bg">
+   <!--Boton hacia arriba-->
+   <a class="ir-arriba" href="#" title="Volver arriba">
+      <span class="fa-stack">
+         <i class="fa fa-circle fa-stack-2x"></i>
+         <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+   </a>
    <div id="slider">
 
       <img src="images/backgrounds/bg1.png" border="0" />
@@ -78,7 +111,7 @@
             <li><a href="services.html">SERVICIO</a></li>
             <li><a href="works.html">PRODUCTOS</a></li>
             <li><a href="pricing.html">VENTAS</a></li>
-            <li><a href="contact.html">CONTACTANOS</a></li>
+
          </ul>
       </div>
       <!--end of menu-->
@@ -92,46 +125,230 @@
          <li><a href="services.html">SERVICIOS</a></li>
          <li><a href="works.html">PRODUCTOS</a></li>
          <li><a href="pricing.html">VENTAS</a></li>
-         <li><a href="contact.html">CONTACTANOS</a></li>
+
       </ul>
    </div>
-   <div class="about">
+   <!-- section  ABOUT -->
+   <div class="about-us">
       <div class="row">
          <div class="col-md-12">
             <div class="head">
-               <p>SOMOS EXPERTOS</p>
-               <h3>SOMOS <span>EXPERTOS</span> EN </h3>
+               <p>QUIENES SOMOS</p>
+               <h3>TENEMOS <span>EXPERIENCIA</span></h3>
+            </div>
+            <!--end of head-->
+            <svg width="100%" height="90px" fill="#ffda00" viewBox="0 0 100% 90" preserveAspectRatio="none" style="margin-bottom: -44px;transform:rotate(-180deg)">
+               <path d="M 0.41421356, 0.19566509 1366, 0.05152333 1366, 64.30153 550, 26.30153 -0.03033009, 73.726403"
+                  stroke-width="0" stroke-dasharray="none" stroke-miterlimit="4">
+               </path>
+            </svg>
+            <div class="experience">
+               <div class="col-md-6">
+                  <iframe width="500" height="500" src="https://www.youtube.com/embed/TF9MctIpWBA" frameborder="0"
+                     marginwidth="0" marginheight="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen=""></iframe>
+               </div>
+
+               <div class="col-md-6">
+                  <div class="experience-detail">
+                     <i class="fa fa-envelope fa-3x"></i>
+                     <h4>TRABAJO EN EQUIPO PARA LA SOLUCION</h4>
+
+                     <div class="experience-content">
+
+                        <p>Tenemos el conocimiento y la experiencia para superar cualquier reto de transportación.
+                           Siendo capaces de desarrollar
+                           estrategias y servicios específicos para cada necesidad de los proyectos que manejamos.</p>
+                     </div>
+                     <!--end of experience-content-->
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="experience-detail">
+                     <i class="fa fa-truck fa-3x"></i>
+                     <h4>SERVICIOS BASADOS EN ACTIVOS PROPIOS</h4>
+                     <div class="experience-content">
+
+                        <p>Mas opciones con eficiente control y puntualidad. Para un balance ideal entre costo y
+                           confiabilidad.</p>
+                     </div>
+                     <!--end of experience-content-->
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="experience-detail">
+                     <i class="fa fa-line-chart fa-3x"></i>
+                     <h4>EQUIPO DE TRABAJO</h4>
+                     <div class="experience-content">
+
+                        <p>Expertos en Transporte de diversos tipos de carga, en Regulaciones Aduaneras,
+                           Gubernamentales. Maniobristas de carga,
+                           sí como empaque y embalaje. Dando su punto de vista en todo momento para cada proyecto.</p>
+                     </div>
+                     <!--end of experience-content-->
+                  </div>
+               </div>
+
+
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <!--end of about us-->
+   <div class="about-team">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="head">
+               <p>NOSOTROS SOMOS</p>
+               <h3>NUESTRO <span>EQUIPO</span></h3>
+            </div>
+            <!--end of head-->
+            <div class="team">
+               <div class="col-md-4">
+                  <div class="team-profile">
+                     <img src="images/team/team1.png" alt="profile" width="100%">
+                     <div class="profile-details">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                        <h4>ÍVAN BARAJAS</h4>
+                        <p>GERENTE GRAL</p>
+                     </div>
+                     <!--end of profile-details-->
+                  </div>
+                  <!--end of one profie-->
+               </div>
+               <!--end of col-4-->
+               <div class="col-md-4">
+                  <div class="team-profile">
+                     <img src="images/team/team1.png" alt="profile" width="100%">
+                     <div class="profile-details">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                        <h4>YAREXI BARAJAS</h4>
+                        <p>GERENTE GRAL</p>
+                     </div>
+                     <!--end of profile-details-->
+                  </div>
+                  <!--end of one profie-->
+               </div>
+               <!--end of col-4-->
+               <div class="col-md-4">
+                  <div class="team-profile">
+                     <img src="images/team/team1.png" alt="profile" width="100%">
+                     <div class="profile-details">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                        <h4>PEDRO BARAJAS</h4>
+                        <p>GERENTE GRAL</p>
+                     </div>
+                     <!--end of profile-details-->
+                  </div>
+                  <!--end of one profie-->
+               </div>
+               <!--end of col-4-->
+            </div>
+            <!--end of team-->
+         </div>
+         <!--end of col-12-->
+      </div>
+      <!--end of row-->
+   </div>
+   <!--end of about team-->
+   <div class="about-more-box">
+      <div class="col-md-12 nopadding">
+         <div class="col-md-3 nopadding">
+            <div class="icon">
+               <i class="fa fa-road"></i>
+               <h3>514 CARGAS</h3>
+            </div>
+            <!--end of icon-->
+         </div>
+         <!--end of col-3-->
+         <div class="col-md-3 nopadding">
+            <div class="icon">
+               <i class="fa fa-truck fa-3x"></i>
+               <h3>874+ SERVICIOS</h3>
+            </div>
+            <!--end of icon-->
+         </div>
+         <!--end of col-3-->
+         <div class="col-md-3 nopadding">
+            <div class="icon">
+               <i class="fa fa-bars"></i>
+               <h3>754 CLIENTES CONTENTOS</h3>
+            </div>
+            <!--end of icon-->
+         </div>
+         <!--end of col-3-->
+         <div class="col-md-3 nopadding">
+            <div class="icon">
+               <i class="fa fa-globe"></i>
+               <h3>45 PUNTOS DE ENTREGA</h3>
+            </div>
+            <!--end of icon-->
+         </div>
+         <!--end of col-3-->
+      </div>
+      <!--end of col-md-12-->
+   </div>
+   <!--end of about more-->
+   <!-- section SERVICE -->
+   <div class="about-servicios">
+      <div class="row like-table-row">
+         <div class="col-md-12">
+            <div class="head">
+               <p>SOMOS EXPERTOS EN</p>
+               <h3>NOSOTROS <span> OFRECEMOS </span>MAS</h3>
             </div>
             <!--end of head-->
             <div class="icon-box">
-               <div class="col-md-4">
+               <div class="col-md-4 text-center">
                   <div class="icon">
                      <i class="fa fa-calendar"></i>
                      <h3>RECOLECTAR</h3>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a dolor quis leo mollis tempor.
                         Etiam porta tempus pellentesque. Aliquam eu mi metus. Etiam neque ipsum, </p>
+                     <div class="view">
+                        <a href="gallery.html">VER MAS </a>
+                     </div>
                   </div>
                   <!--end of icon-->
                </div>
                <!--end of col-4-->
-               <div class="col-md-4">
+               <div class="col-md-4 text-center">
                   <div class="icon">
                      <i class="fa fa-truck"></i>
-                     <h3>EMPACAR</h3>
+                     <h3>EMPAQUES A LA MEDIDA</h3>
                      <p> In eu lacus neque. In feugiat neque et mauris commodo, eu iaculis turpis aliquam. Mauris
                         facilisis dui nisl, ut malesuada nisl sodales et. Phasellus lobortis commodo ante, a rhoncus
                         metus porttitor non.</p>
+                     <div class="view">
+                        <a href="gallery.html">VER MAS </a>
+                     </div>
                   </div>
                   <!--end of icon-->
                </div>
                <!--end of col-4-->
-               <div class="col-md-4">
+               <div class="col-md-4 text-center">
                   <div class="icon">
                      <i class="fa  fa-users"></i>
                      <h3>DISTRIBUIR</h3>
                      <p>Integer suscipit pellentesque varius. Aliquam vulputate ornare libero vitae faucibus. Proin
                         gravida augue eu tellus tempus condimentum. Aliquam convallis ornare odio. Aenean ut erat
                         dictum.</p>
+                     <div class="view">
+                        <a href="gallery.html">VER MAS </a>
+                     </div>
                   </div>
                   <!--end of icon-->
                </div>
@@ -143,12 +360,109 @@
       </div>
       <!--end of row-->
    </div>
-   <!--end of about-->
+   <div class="about-more">
+      <div class="col-md-12 nopadding">
+         <div class="col-md-6 nopadding">
+            <div class="one-bg">
+               <h2>RECOLECION</h2>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+         <div class="col-md-6 nopadding">
+            <div class="about-more-more">
+               <p>Aliquam odio mauris, ullamcorper vitae magna vel, euismod imperdiet tellus. Proin ultricies blandit
+                  purus in convallis. Nullam ipsum elit, cursus sit amet sagittis et, vulputate sed nisi. Cras est
+                  tellus, posuere euismod gravida at, egestas ut mauris. Cras egestas aliquet lorem, ac pretium velit
+                  congue tempor. Vestibulum cursus blandit pulvinar. Quisque ornare felis ut sagittis imperdiet. Donec
+                  et vehicula mauris, nec placerat dolor. Praesent sodales ex a leo suscipit molestie.</p>
+               <p> Donec ac auctor lectus. Aenean accumsan odio non leo imperdiet, a ultricies massa efficitur.
+                  Phasellus at gravida urna, et iaculis enim. Donec venenatis imperdiet nunc consequat consequat. Sed
+                  eget mollis mi. Sed tempor mauris vel elit efficitur, vel cursus tellus interdum. In semper porttitor
+                  euismod. Aliquam ut auctor sem. Aliquam eu justo eu nisl bibendum malesuada ac ut massa. Nulla
+                  facilisi.</p>
+               <p>Donec congue vestibulum risus, quis lobortis libero elementum sit amet. In id arcu in nisl fringilla
+                  molestie. Nullam vel elit pulvinar, ultricies dolor quis, egestas urna. Phasellus vehicula est eget
+                  condimentum lobortis.</p>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+      </div>
+      <!--end of col-md-12-->
+   </div>
+   <!--end of about more-->
+   <div class="about-more">
+      <div class="col-md-12 nopadding">
+         <div class="col-md-6 nopadding">
+            <div class="about-more-more cin">
+               <p>Aliquam odio mauris, ullamcorper vitae magna vel, euismod imperdiet tellus. Proin ultricies blandit
+                  purus in convallis. Nullam ipsum elit, cursus sit amet sagittis et, vulputate sed nisi. Cras est
+                  tellus, posuere euismod gravida at, egestas ut mauris. Cras egestas aliquet lorem, ac pretium velit
+                  congue tempor. Vestibulum cursus blandit pulvinar. Quisque ornare felis ut sagittis imperdiet. Donec
+                  et vehicula mauris, nec placerat dolor. Praesent sodales ex a leo suscipit molestie.</p>
+               <p> Donec ac auctor lectus. Aenean accumsan odio non leo imperdiet, a ultricies massa efficitur.
+                  Phasellus at gravida urna, et iaculis enim. Donec venenatis imperdiet nunc consequat consequat. Sed
+                  eget mollis mi. Sed tempor mauris vel elit efficitur, vel cursus tellus interdum. In semper porttitor
+                  euismod. Aliquam ut auctor sem. Aliquam eu justo eu nisl bibendum malesuada ac ut massa. Nulla
+                  facilisi.</p>
+               <p>Donec congue vestibulum risus, quis lobortis libero elementum sit amet. In id arcu in nisl fringilla
+                  molestie. Nullam vel elit pulvinar, ultricies dolor quis, egestas urna. Phasellus vehicula est eget
+                  condimentum lobortis.</p>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+         <div class="col-md-6 nopadding">
+            <div class="two-bg">
+               <h2>EMPAQUES</h2>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+      </div>
+      <!--end of col-md-12-->
+   </div>
+   <!--end of about more-->
+   <div class="about-more">
+      <div class="col-md-12 nopadding">
+         <div class="col-md-6 nopadding">
+            <div class="three-bg">
+               <h2>DISTRIBUCION</h2>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+         <div class="col-md-6 nopadding">
+            <div class="about-more-more">
+               <p>Aliquam odio mauris, ullamcorper vitae magna vel, euismod imperdiet tellus. Proin ultricies blandit
+                  purus in convallis. Nullam ipsum elit, cursus sit amet sagittis et, vulputate sed nisi. Cras est
+                  tellus, posuere euismod gravida at, egestas ut mauris. Cras egestas aliquet lorem, ac pretium velit
+                  congue tempor. Vestibulum cursus blandit pulvinar. Quisque ornare felis ut sagittis imperdiet. Donec
+                  et vehicula mauris, nec placerat dolor. Praesent sodales ex a leo suscipit molestie.</p>
+               <p> Donec ac auctor lectus. Aenean accumsan odio non leo imperdiet, a ultricies massa efficitur.
+                  Phasellus at gravida urna, et iaculis enim. Donec venenatis imperdiet nunc consequat consequat. Sed
+                  eget mollis mi. Sed tempor mauris vel elit efficitur, vel cursus tellus interdum. In semper porttitor
+                  euismod. Aliquam ut auctor sem. Aliquam eu justo eu nisl bibendum malesuada ac ut massa. Nulla
+                  facilisi.</p>
+               <p>Donec congue vestibulum risus, quis lobortis libero elementum sit amet. In id arcu in nisl fringilla
+                  molestie. Nullam vel elit pulvinar, ultricies dolor quis, egestas urna. Phasellus vehicula est eget
+                  condimentum lobortis.</p>
+            </div>
+            <!--end of about bg-->
+         </div>
+         <!--end of col-6-->
+      </div>
+      <!--end of col-md-12-->
+   </div>
+   <!--end section SERVICE -->
+
    <svg width="100%" height="90px" fill="#ffda00" viewBox="0 0 100% 90" preserveAspectRatio="none" style="margin-bottom: -8px;transform:rotate(-180deg)">
       <path d="M 0.41421356, 0.19566509 1366, 0.05152333 1366, 64.30153 550, 26.30153 -0.03033009, 73.726403"
          stroke-width="0" stroke-dasharray="none" stroke-miterlimit="4">
       </path>
    </svg>
+
    <div class="story">
       <div class="row">
          <div class="col-md-12">
@@ -184,6 +498,44 @@
       </div>
    </div>
    <!--end of story-->
+   <!-- END SECTION ABOUT -->
+   <section id="Baner" class="">
+      <div class="container">
+         <div class="row pt-80 pb-80">
+            <div class="col-md-3 col-sm-6 my-5 text-center">
+               <div class="counter wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                  <i class="fas fa-chart-line fa-2x"></i>
+                  <h2 class="white-color"><span class="count font-600">629</span><span class="font-600">+</span></h2>
+                  <h3 class="white-color">Projects Wons</h3>
+               </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 my-5 text-center">
+               <div class="counter wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <i class="fa fa-tools fa-2x"></i>
+                  <h2 class="white-color"><span class="count font-600">223</span><span class="font-600">+</span></h2>
+                  <h3 class="white-color">Our Customers</h3>
+               </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 my-5 text-center">
+               <div class="counter wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                  <i class="fa fa-plane fa-2x"></i>
+                  <h2 class="white-color"><span class="count font-600">452</span><span class="font-600">+</span></h2>
+                  <h3 class="white-color">Reviews</h3>
+               </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 my-5 text-center">
+               <div class="counter wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                  <i class="fa fa-life-ring fa-2x"></i>
+                  <h2 class="white-color"><span class="count font-600">742</span><span class="font-600">+</span></h2>
+                  <h3 class="white-color">Build a Websites</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
    <div class="gallery">
       <div class="row">
          <div class="col-md-12 ">
@@ -321,6 +673,37 @@
          <!--end of col-12-->
       </div>
    </div>
+   <!-- SECTION DONDE ESTAMOS -->
+   <div class="contact">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="contact-section">
+               <div class="col-md-6">
+                  <div class="address">
+                     <h2>DONDE ESTAMOS</h2>
+                     <ul>
+                        <li><i class="fa fa-building-o"></i> PROEBAPACK</li>
+                        <li><i class="fa fa-location-arrow"></i> Municipio 5 de Mayo km 1 </li>
+                        <li><i class="fa fa-map-marker"></i> Tepic, Nayarit</li>
+                        <li><i class="fa fa-phone"></i> +951 236-4677</li>
+                     </ul>
+                  </div>
+                  <!--end of address-->
+               </div>
+               <!--end of col-md-6-->
+               <div class="col-md-6 text-center">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14847.877980776071!2d-104.90133423438347!3d21.508914770722182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84273702c0e631ab%3A0xf8dd9a85cd205254!2sCentro%2C+Tepic%2C+Nay.!5e0!3m2!1ses-419!2smx!4v1547836123481"
+                     width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+               </div>
+               <!--end of col-md-6-->
+            </div>
+            <!--end of section-->
+         </div>
+         <!--end of col-md-12-->
+      </div>
+      <!--end of row-->
+   </div>
+
    <div class="foot">
       <div class="row">
          <div class="col-md-12 ">

@@ -55,6 +55,19 @@ p {
 	overflow-y: hidden;
 }
 
+.ir-arriba {
+	display: none;
+	padding: 30px;
+	background-repeat: no-repeat;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 2;
+}
+
 /***************************************************************************/
 /************************2.SLIDER IMAGES***********************************/
 /*************************************************************************/
@@ -308,13 +321,15 @@ div#text-slider h1.wel span {
 }
 
 .icon h3 {
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 0, 0, 0.7);
 	font-weight: 600;
 	text-transform: uppercase;
 }
 
 .icon-row-2 {
 	margin-top: 60px;
+
+
 }
 
 .icon p {
@@ -325,7 +340,23 @@ div#text-slider h1.wel span {
 
 .icon i {
 	font-size: 40px;
+	color: #fff;
+	background: #891e67;
+	padding: 17px 17px 17px 17px;
+	border-radius: 539px;
+	border: 2px solid #891e67;
+}
+
+.icon i:hover {
+	font-size: 40px;
 	color: #891e67;
+	background: #ffda00;
+	padding: 17px 17px 17px 17px;
+	border-radius: 539px;
+	border: 2px solid #fff;
+	transition-timing-function: ease-in-out;
+
+
 }
 
 /***************************************************************************/
@@ -906,6 +937,12 @@ ul#lightgallery li img:hover {
 .about-us {
 	padding: 7%;
 	background-color: #f3f3f3;
+}
+
+.about-servicios {
+	padding: 7%;
+	background-color: #f3f3f3;
+
 }
 
 .experience {
